@@ -47,10 +47,10 @@ class ListStrategyFactory {
 
 	public static DynamicListStrategy getDynamicListStrategy(Strategy strategy) {
 		switch (strategy) {
-		case HTMLLIST:
-			return createHtmlListStrategy();
-		case MARKDOWN:
-			return createMarkdownStrategy();
+			case HTMLLIST:
+				return createHtmlListStrategy();
+			case MARKDOWN:
+				return createMarkdownStrategy();
 		}
 		throw new IllegalArgumentException();
 	}
