@@ -8,6 +8,14 @@ class Point {
 	
 	private double x, y;
 
+	public double getX() {
+		return x;
+	}
+
+	public double getY() {
+		return y;
+	}
+
 	private Point(double x, double y) {
 		this.x = x;
 		this.y = y;
@@ -23,6 +31,12 @@ class Point {
 			return new Point(rho * Math.cos(theta), rho * Math.sin(theta));
 		}
 	}
+
+	@Override
+	public String toString() {
+		return "Point [x=" + x + ", y=" + y + "]";
+	}
+	
 }
 
 public class FactoryBasic {
