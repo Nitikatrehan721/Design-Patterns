@@ -10,6 +10,7 @@ import java.io.ObjectOutputStream;
  * IF we serialize enum it will only serialize it's name i.e INSTANCE not the other fields
  * 
  * value specified in Constructor is taken IFF we don't call setValue()
+ * ENUM can't be inherited
  */
 
 enum Singleton {
