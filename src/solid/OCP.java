@@ -62,6 +62,26 @@ class SizeSpecification implements Specification<Product> {
 
 }
 
+//  If we follow this approach then space will explode(3 criteria = 7 methods)
+/*
+ * This approach is open for modification, thus we have to we have to test all existing flows as well 
+ * */
+//class ProductFilter {
+//	public Stream<Product> filterByColor(List<Product> products, Color color) {
+//		return products.stream().filter(p -> p.color == color);
+//	}
+//
+//	public Stream<Product> filterBySize(List<Product> products, Size size) {
+//		return products.stream().filter(p -> p.size == size);
+//	}
+//
+//	public Stream<Product> filterBySizeAndColor(List<Product> products, Size size, Color color) {
+//		return products.stream().filter(p -> p.size == size && p.color == color);
+//	}
+//	// state space explosion
+//	// 3 criteria = 7 methods
+//}
+
 class AndSpecification<T> implements Specification<T> {
 	private Specification<T> first, second;
 
