@@ -6,9 +6,6 @@ package adapter;
  * possible solution map<hashcode, data> i.e implement equals and hashcode
  */
 
-
-
-
 class Square {
 	public int side;
 

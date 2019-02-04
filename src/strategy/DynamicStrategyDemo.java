@@ -9,9 +9,13 @@ enum Strategy {
 
 // interface
 interface DynamicListStrategy {
-	default void start(StringBuilder sb) {}
+	default void start(StringBuilder sb) {
+	}
+
 	void addListItem(StringBuilder stringBuilder, String item);
-	default void end(StringBuilder sb) {}
+
+	default void end(StringBuilder sb) {
+	}
 }
 
 // dynamic strategy algorithm
@@ -47,10 +51,10 @@ class ListStrategyFactory {
 
 	public static DynamicListStrategy getDynamicListStrategy(Strategy strategy) {
 		switch (strategy) {
-			case HTMLLIST:
-				return createHtmlListStrategy();
-			case MARKDOWN:
-				return createMarkdownStrategy();
+		case HTMLLIST:
+			return createHtmlListStrategy();
+		case MARKDOWN:
+			return createMarkdownStrategy();
 		}
 		throw new IllegalArgumentException();
 	}
