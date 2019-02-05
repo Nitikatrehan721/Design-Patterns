@@ -1,5 +1,22 @@
 package template;
 
+/*
+ * In Strategy pattern, generally entire behaviour of the class is represented in terms of an interface, 
+ * on the other hand, Template method is used for reducing code duplication and the boilerplate code is defined in 
+ * base framework or abstract class. In Template Method, there can even be a concrete class with default implementation.
+ */
+
+/*
+ * Algorithm can be decompose into common parts + specific
+ *	1.  Strategy does same thing through composition
+ *		- high level algorithm uses an interface	
+ *		- concrete implementation  implements the interface
+ *	2. Template does same thing through inheritance
+ *		- overall algorithm make use of abstract member
+ *		- inheritors  override the abstract members
+ *		- Parent template method invoked
+ */
+
 // concrete classes will extend this class
 abstract class CardGame {
 	public Creature[] creatures;
