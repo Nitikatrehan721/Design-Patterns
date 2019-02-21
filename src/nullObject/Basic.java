@@ -36,6 +36,14 @@ class BankAccount {
 		balance += amount;
 		log.info("Deposited -" + amount);
 	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
 }
 
 public class Basic {
@@ -52,3 +60,17 @@ public class Basic {
 
 	}
 }
+
+/*
+ * It is all about building some sort of no object that conforms to the required
+ * interface and satisfies a dependency requirement but doesn't do a single
+ * thing. it just doesn't do anything it's an empty object. But it does satisfy
+ * the interface and it can be passed in instead of NULL and invocations on it
+ * don’t cause any exceptions. Motivation: 1. When component A uses B, it
+ * assumes B is not null - We inject B, not Option<B> - We do not check for null
+ * on every call 2. There is no option of telling A not to use an instance of B
+ * - Its mostly hard coded
+ *
+ * Solution : Build no-op, non-functioning inheritor of B(or some interface that
+ * B implements and pass it to A
+ */

@@ -28,6 +28,14 @@ class BankAccountInfo {
 		balance += amount;
 		log.info("Deposited -" + amount);
 	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
 }
 
 public class Dynamic {

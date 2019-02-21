@@ -1,7 +1,2 @@
-/adapter/
-/strategy/
-/bridge/
-/composition/
-/template/
 /nullObject/
-/facade/
+/decorator/
