@@ -78,3 +78,4 @@ class PermanentCardDamageGame extends CardGame {
 		other.health -= attacker.attack;
 	}
 }
+
