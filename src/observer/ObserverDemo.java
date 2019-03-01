@@ -48,6 +48,7 @@ class Person extends Observables<Person>{
 }
 
 
+// Observer
 public class ObserverDemo implements Observer<Person> {
 
 	public static void main(String args[]){
