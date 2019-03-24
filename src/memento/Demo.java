@@ -1,5 +1,9 @@
 package memento;
 
+/*
+ * A token that represents a state of system that allows us to roll-back to a state when token was generated. 
+ */
+
 class Memento{
 	private int value;
 	
